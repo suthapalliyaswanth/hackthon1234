@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Diseases Prediction</title>
+  <style>
+    .ag-format-container {
+      width: 1142px;
+      margin: 0 auto;
+    }
+
+    body {
+      background-color: #fafafa; /* Changed background color to a user-friendly shade of gray */
+    }
+
+    .ag-courses_box {
+      display: flex;
+      justify-content: center; /* Horizontally center the items */
+      align-items: center; /* Vertically center the items */
+      flex-wrap: wrap;
+      padding: 50px 0;
+    }
+
+    .ag-courses_item {
+      flex-basis: calc(25% - 30px); /* Adjusted flex-basis to accommodate 4 cards per row */
+      margin: 0 15px 30px;
+      overflow: hidden;
+      border-radius: 28px;
+    }
+
+    .ag-courses_item:nth-child(4n) {
+      margin-right: 0; /* Remove right margin for the last card in each row */
+    }
+
+    .ag-courses-item_link {
+      display: block;
+      padding: 30px 20px;
+      background-color: #121212; /* Changed background color to a darker shade for better contrast */
+      overflow: hidden;
+      position: relative;
+    }
+
+    .ag-courses-item_link:hover,
+    .ag-courses-item_link:hover .ag-courses-item_date {
+      text-decoration: none;
+      color: #fff;
+    }
+
+    .ag-courses-item_link:hover .ag-courses-item_bg {
+      transform: scale(10);
+    }
+
+    .ag-courses-item_title {
+      min-height: 87px;
+      margin: 0 0 25px;
+      overflow: hidden;
+      font-weight: bold;
+      font-size: 30px;
+      color: #fff;
+      z-index: 2;
+      position: relative;
+    }
+
+    .ag-courses-item_date-box {
+      font-size: 18px;
+      color: #fff;
+      z-index: 2;
+      position: relative;
+    }
+
+    .ag-courses-item_date {
+      font-weight: bold;
+      color: #f9b234;
+      transition: color 0.5s ease;
+    }
+
+    .ag-courses-item_bg {
+      height: 128px;
+      width: 128px;
+      background-color: #f9b234;
+      z-index: 1;
+      position: absolute;
+      top: -75px;
+      right: -75px;
+      border-radius: 50%;
+      transition: all 0.5s ease;
+    }
+
+    .ag-courses_item:nth-child(2n) .ag-courses-item_bg {
+      background-color: #3ecd5e;
+    }
+
+    .ag-courses_item:nth-child(3n) .ag-courses-item_bg {
+      background-color: #e44002;
+    }
+
+    .ag-courses_item:nth-child(4n) .ag-courses-item_bg {
+      background-color: #952aff;
+    }
+
+    @media only screen and (max-width: 979px) {
+      .ag-courses_item {
+        flex-basis: calc(50% - 30px);
+      }
+      .ag-courses-item_title {
+        font-size: 24px;
+      }
+    }
+
+    @media only screen and (max-width: 767px) {
+      .ag-format-container {
+        width: 96%;
+      }
+    }
+
+    @media only screen and (max-width: 639px) {
+      .ag-courses_item {
+        flex-basis: 100%;
+      }
+      .ag-courses-item_title {
+        min-height: 72px;
+        line-height: 1;
+        font-size: 24px;
+      }
+      .ag-courses-item_link {
+        padding: 22px 40px;
+      }
+      .ag-courses-item_date-box {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="ag-format-container">
+    <div class="ag-courses_box">
+      <!-- Card 1 -->
+      <div class="ag-courses_item">
+        <a href="{{url_for('healthblueprint')}}" class="ag-courses-item_link">
+          <div class="ag-courses-item_bg"></div>
+          <div class="ag-courses-item_title">HealthBluePrint</div>
+          <div class="ag-courses-item_date-box">
+            Start:
+            <span class="ag-courses-item_date">HealthBluePrint</span>
+          </div>
+        </a>
+      </div>
+      
+      <!-- Card 2 -->
+      <div class="ag-courses_item">
+        <a href="{{url_for('organhealth')}}" class="ag-courses-item_link">
+          <div class="ag-courses-item_bg"></div>
+          <div class="ag-courses-item_title">Habits: Organ Health</div>
+          <div class="ag-courses-item_date-box">
+            Start:
+            <span class="ag-courses-item_date">Habits: Organ Health</span>
+          </div>
+        </a>
+      </div>
+      
+      <!-- Card 3 -->
+      <div class="ag-courses_item">
+        <a href="{{ url_for('fooddiet') }}" class="ag-courses-item_link">
+          <div class="ag-courses-item_bg"></div>
+          <div class="ag-courses-item_title">Nourishing Nutrition</div>
+          <div class="ag-courses-item_date-box">
+            Start:
+            <span class="ag-courses-item_date">Nourishing Nutrition</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="ag-courses_item">
+        <a href="{{url_for('exercise')}}" class="ag-courses-item_link">
+          <div class="ag-courses-item_bg"></div>
+          <div class="ag-courses-item_title">Vision Vitality</div>
+          <div class="ag-courses-item_date-box">
+            Start:
+            <span class="ag-courses-item_date">Vision Vitality</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="ag-courses_item">
+        <a href="{{url_for('cancer')}}" class="ag-courses-item_link">
+          <div class="ag-courses-item_bg"></div>
+          <div class="ag-courses-item_title">Cancer</div>
+          <div class="ag-courses-item_date-box">
+            Start:
+            <span class="ag-courses-item_date">Cancer</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="ag-courses_item">
+        <a href="{{url_for('milkdonor')}}" class="ag-courses-item_link">
+          <div class="ag-courses-item_bg"></div>
+          <div class="ag-courses-item_title">Milk Donor</div>
+          <div class="ag-courses-item_date-box">
+            Start:
+            <span class="ag-courses-item_date">Milk Donor</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Card 7 -->
+      <div class="ag-courses_item">
+        <a href="{{url_for('prediction')}}" class="ag-courses-item_link">
+          <div class="ag-courses-item_bg"></div>
+          <div class="ag-courses-item_title">Innovative Forecasts</div>
+          <div class="ag-courses-item_date-box">
+            Start:
+            <span class="ag-courses-item_date">Innovative Forecasts</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Card 8 -->
+      <div class="ag-courses_item">
+        <a href="{{url_for('graph')}}" class="ag-courses-item_link">
+          <div class="ag-courses-item_bg"></div>
+          <div class="ag-courses-item_title">Graphs</div>
+          <div class="ag-courses-item_date-box">
+            Start:
+            <span class="ag-courses-item_date">Graphs</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

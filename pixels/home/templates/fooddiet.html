@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>FoodDiet</title>
+  <link rel="stylesheet" href="{{url_for('static',filename='css/fooddiet.css')}}">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="container">
+    <div class="card">
+        <div class="circle">
+            <h2>01</h2>
+        </div>
+        <div class="content">
+            <p>The calorie is a unit of energy that originated from the caloric theory of heat. The large calorie, food calorie, dietary calorie, or kilogram calorie?</p>
+                <a href="{{url_for('fooddiet_prediction')}}">food</a>
+        </div>
+    </div>
+    <div class="card">
+        <div class="circle">
+            <h2>02</h2>
+        </div>
+        <div class="content">
+            <p>The calorie is a unit of energy that originated from the caloric theory of heat. The large calorie, food calorie, dietary calorie, or kilogram calorie?</p>
+                <a href="{{url_for('calories')}}">calories</a>
+        </div>
+    </div>
+    <div class="card">
+        <div class="circle">
+            <h2>03</h2>
+        </div>
+        <div class="content">
+            <p>The calorie is a unit of energy that originated from the caloric theory of heat. The large calorie, food calorie, dietary calorie, or kilogram calorie?</p>
+                <li><a href="{{url_for('dietcheck_from')}}">Diet</a></li>
+        </div>
+    </div>
+</div>
+
+<button><a href="{{url_for('index')}}">Back</a></button>
+<!-- partial -->
+  
+</body>
+</html>

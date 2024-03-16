@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Check Your Diet</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        max-width: 600px;
+        margin: 50px auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        text-align: center;
+        color: #333;
+      }
+      p {
+        margin-bottom: 20px;
+        color: #666;
+      }
+      form {
+        text-align: center;
+      }
+      input[type="text"] {
+        width: 80%;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+      }
+      input[type="submit"] {
+        width: 40%;
+        padding: 10px;
+        border: none;
+        background-color: #4caf50;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+      input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Check Your Diet</h1>
+      <p>Enter the food items you've consumed (comma-separated):</p>
+      <form method="post" action="/service/dietcheck_result/">
+        {% csrf_token %}
+        <input type="text" name="foods" />
+        <br />
+        <input type="submit" value="Check" />
+      </form>
+    </div>
+  </body>
+</html>

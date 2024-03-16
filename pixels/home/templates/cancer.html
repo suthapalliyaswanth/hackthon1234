@@ -1,0 +1,228 @@
+<html>
+  <head>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+      body {
+        font-family: "Poppins", sans-serif;
+        background-image: linear-gradient(120deg, #87CEEB, #F5DEB3 100%);
+      }
+      .box {
+        display: flex;
+      }
+      .box- {
+        display: flex;
+      }
+      .box1 {
+        width: 400px;
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+        border-radius: 30px;
+        margin-left: 100px;
+        letter-spacing: 2px;
+        padding: 10px;
+        margin-top: 20px;
+        transition: 0.3s;
+      }
+      .box2 {
+        width: 400px;
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+        border-radius: 30px;
+        margin-left: 100px;
+        letter-spacing: 2px;
+        padding: 10px;
+        margin-top: 20px;
+        transition: 0.3s;
+      }
+      .box3 {
+        width: 400px;
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+        border-radius: 30px;
+        margin-left: 100px;
+        margin-right: 100px;
+        letter-spacing: 2px;
+        padding: 10px;
+        margin-top: 20px;
+        transition: 0.3s;
+      }
+      .box1:hover {
+        transform: translateY(-10px);
+      }
+      .box2:hover {
+        transform: translateY(-10px);
+      }
+      .box3:hover {
+        transform: translateY(-10px);
+      }
+      .box-1 {
+        width: 400px;
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+        border-radius: 30px;
+        margin-left: 100px;
+        letter-spacing: 2px;
+        padding: 10px;
+        margin-top: 20px;
+        transition: 0.3s;
+      }
+      .box-2 {
+        width: 400px;
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+        border-radius: 30px;
+        margin-left: 100px;
+        letter-spacing: 2px;
+        padding: 10px;
+        margin-top: 20px;
+        transition: 0.3s;
+      }
+      .box-3 {
+        width: 400px;
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+        border-radius: 30px;
+        margin-left: 100px;
+        letter-spacing: 2px;
+        padding: 10px;
+        margin-top: 20px;
+        transition: 0.3s;
+      }
+      .box-1:hover {
+        transform: translateY(-10px);
+      }
+      .box-2:hover {
+        transform: translateY(-10px);
+      }
+      .box-3:hover {
+        transform: translateY(-10px);
+      }
+      img {
+        border-top-right-radius: 30px;
+        border-top-left-radius: 30px;
+      }
+      button {
+        display: block;
+        width: 100%;
+        padding: 15px 20px;
+        text-align: center;
+        border: none;
+        background: #603f83ff;
+        outline: none;
+        border-radius: 30px;
+        font-size: 1.2rem;
+        color: #c7d3d4ff;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+      button:hover {
+        background-color: #c7d3d4ff;
+        color: #603f83ff;
+        transform: translateY(-5px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="box1">
+        <img
+          src="{{url_for('static',filename='img/1stcancerKidney.gif')}}"
+          height="180px"
+          width="100%"
+        />
+        <center>
+          <h2>Kidney</h2>
+          <button><a href="{{url_for('Kidneycancer')}}">CLICK HERE</a></button>
+        </center>
+      </div>
+      <div class="box2">
+        <img
+          src="{{url_for('static',filename='img/1stcancerbreast.jpg')}}"
+          height="180px"
+          width="100%"
+        />
+        <center>
+          <h2>breast</h2>
+          <button><a href="{{url_for('breastcancer')}}">CLICK HERE</a></button>
+        </center>
+      </div>
+      <div class="box3">
+        <img
+          src="{{url_for('static',filename='img/1stlungcancer.gif')}}"
+          height="180px"
+          width="100%"
+        />
+        <center>
+          <h2>Lungs</h2>
+          <button><a href="{{url_for('lungcancer')}}">CLICK HERE</a></button>
+        </center>
+      </div>
+    </div>
+    <br />
+    <div class="box-">
+      <div class="box-1">
+        <img
+          src="{{url_for('static',filename='img/1stcancercarcinoma.gif')}}"
+          height="180px"
+          width="100%"
+        />
+        <center>
+          <h2>carcinoma</h2>
+          <button><a href="{{url_for('carcinomacancer')}}">CLICK HERE</a></button>
+        </center>
+      </div>
+      <div class="box-2">
+        <img
+          src="{{url_for('static',filename='img/1stcancermelanoma.gif')}}"
+          height="180px"
+          width="100%"
+        />
+        <center>
+          <h2>Melanoma</h2>
+          <button><a href="{{url_for('melanoma')}}">CLICK HERE</a></button>
+        </center>
+      </div>
+      <div class="box3">
+        <img
+          src="{{url_for('static',filename='img/1stcancerlymphoma.gif')}}"
+          height="180px"
+          width="100%"
+        />
+        <center>
+          <h2>lymphomacancer</h2>
+          <button><a href="{{url_for('lymphomacancer')}}">CLICK HERE</a></button>
+        </center>
+      </div>
+    </div><br>
+
+    <div class="box">
+        <div class="box1">
+          <img
+            src="{{url_for('static',filename='img/1stcancerleukemia.gif')}}"
+            height="180px"
+            width="100%"
+          />
+          <center>
+            <h2>leukemia</h2>
+            <button><a href="{{url_for('leukemiacancer')}}">CLICK HERE</a></button>
+          </center>
+        </div>
+        <div class="box2">
+          <img
+            src="{{url_for('static',filename='img/1stcancerblood.gif')}}"
+            height="180px"
+            width="100%"
+          />
+          <center>
+            <h2>blood</h2>
+            <button><a href="{{url_for('bloodcancer')}}">CLICK HERE</a></button>
+          </center>
+        </div>
+        <div class="box3">
+          <img
+            src="{{url_for('static',filename='img/1stcancerbrain.jpg')}}"
+            height="180px"
+            width="100%"
+          />
+          <center>
+            <h2>brain</h2>
+            <button><a href="{{url_for('braincancer')}}">CLICK HERE</a></button>
+          </center>
+        </div>
+      </div>
+  </body>
+</html>

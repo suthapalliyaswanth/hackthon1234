@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diet Recommendation</title>
+</head>
+<body>
+    <h1>Diet Recommendation</h1>
+    <div id="result"></div>
+    <div id="foodList"></div>
+
+    <script>
+        fetch('/ageresult', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ age: 30, weight: 70 }) // Example age and weight, you can change this dynamically
+        })
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('result').innerText = `Recommended Diet: ${data.diet}`;
+            if (data.recommended_food.length > 0) {
+                const foodList = data.recommended_food.map(food => `<li>${food}</li>`).join('');
+                document.getElementById('foodList').innerHTML = `<p>Recommended Food:</p><ul>${foodList}</ul>`;
+            }
+        })
+        .catch(error => console.error('Error:', error));
+    </script>
+</body>
+</html>

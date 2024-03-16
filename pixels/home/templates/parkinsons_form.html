@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parkinson's Prediction Form</title>
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 500px;
+    width: 100%;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 50px; /* Adjust this value as needed */
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input[type="text"] {
+    width: calc(100% - 12px);
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+span.required {
+    color: red;
+    margin-left: 3px;
+}
+
+.success-message {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 10px;
+    display: none;
+}
+
+</style>
+</head>
+<body>
+    <div class="container">
+        <h1>Parkinson's Prediction Form</h1>
+        <form action="/predict_parkinsons" method="post">
+              
+        <label for="fo">MDVP:Fo(Hz)<span class="required">*</span>:</label>
+        <input type="text" name="fo" required>
+
+        <label for="fhi">MDVP:Fhi(Hz) <span class="required">*</span>:</label>
+        <input type="text" name="fhi" required>
+
+        <label for="flo">MDVP:Flo(Hz) <span class="required">*</span>:</label>
+        <input type="text" name="flo" required>
+
+        <label for="Jitter_percent">MDVP:Jitter(%) <span class="required">*</span>:</label>
+        <input type="text" name="Jitter_percent" required>
+
+        <label for="Jitter_Abs">MDVP:Jitter(Abs) <span class="required">*</span>:</label>
+        <input type="text" name="Jitter_Abs" required>
+        
+        <label for="RAP">MDVP:RAP <span class="required">*</span>:</label>
+        <input type="text" name="RAP" required>
+
+        <label for="PPQ">MDVP:PPQ <span class="required">*</span>:</label>
+        <input type="text" name="PPQ" required>
+
+        <label for="DDP">Jitter:DDP <span class="required">*</span>:</label>
+        <input type="text" name="DDP" required>
+        
+         
+        <label for="Shimmer">MDVP:Shimmer <span class="required">*</span>:</label>
+        <input type="text" name="Shimmer" required>
+
+        <label for="Shimmer_dB">MDVP:Shimmer(dB) <span class="required">*</span>:</label>
+        <input type="text" name="Shimmer_dB" required>
+
+        <label for="APQ3">Shimmer:APQ3 <span class="required">*</span>:</label>
+        <input type="text" name="APQ3" required>
+
+        <label for="APQ5">Shimmer:APQ5 <span class="required">*</span>:</label>
+        <input type="text" name="APQ5" required>
+
+        <label for="APQ">MDVP:APQ <span class="required">*</span>:</label>
+        <input type="text" name="APQ" required>
+
+        <label for="DDA">Shimmer:DDA <span class="required">*</span>:</label>
+        <input type="text" name="DDA" required>
+
+        <label for="NHR">NHR <span class="required">*</span>:</label>
+        <input type="text" name="NHR" required>
+
+        <label for="HNR">HNR <span class="required">*</span>:</label>
+        <input type="text" name="HNR" required>
+
+        <label for="RPDE">RPDE <span class="required">*</span>:</label>
+        <input type="text" name="RPDE" required>
+
+        <label for="DFA">DFA <span class="required">*</span>:</label>
+        <input type="text" name="DFA" required>
+
+        <label for="spread1">spread1 <span class="required">*</span>:</label>
+        <input type="text" name="spread1" required>
+
+        <label for="spread2">spread2 <span class="required">*</span>:</label>
+        <input type="text" name="spread2" required>
+
+        <label for="D2">D2 <span class="required">*</span>:</label>
+        <input type="text" name="D2" required>
+
+        <label for="PPE">PPE <span class="required">*</span>:</label>
+        <input type="text" name="PPE" required>
+
+        <input type="submit" value="Submit">
+    </form>
+     
+</div>
+
+
+</body>
+</html>

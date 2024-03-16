@@ -1,0 +1,108 @@
+<html>
+  <head>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+      
+      body {
+          font-family: "Roboto", sans-serif;
+          background-image: linear-gradient(120deg, #f7d9b9 0%, #c4b9cb 100%);
+          margin: 0;
+          padding: 20px;
+      }
+
+      .box {
+          display: flex;
+          justify-content: space-between; /* Distribute space between cards */
+          gap: 20px;
+      }
+
+      .box1, .box2, .box3 {
+          width: calc(33.33% - 20px); /* Adjust card width to fit three cards in a row with gap */
+          height: 600px; /* Set fixed height for all boxes */
+          box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+          border-radius: 30px;
+          padding: 20px;
+          transition: 0.3s;
+          background-color: #f0e1d7;
+          display: flex;
+          flex-direction: column;
+      }
+
+      .box1:hover, .box2:hover, .box3:hover {
+          transform: translateY(-10px);
+      }
+
+      img {
+          border-top-right-radius: 30px;
+          border-top-left-radius: 30px;
+          width: 100%;
+          height: auto;
+      }
+
+      h2, p {
+          text-align: center;
+          color: #333333;
+      }
+
+      button {
+          display: block;
+          width: 100%;
+          padding: 15px 20px;
+          text-align: center;
+          border: none;
+          background-color: #5a189aff; /* Updated button color */
+          outline: none;
+          border-radius: 30px;
+          font-size: 1.2rem;
+          color: #ffffff; /* Updated button front color */
+          cursor: pointer;
+          transition: 0.3s;
+          margin-top: auto;
+      }
+
+      button:hover {
+          background-color: #e63946ff; /* Updated button hover color */
+          color: #ffffff;
+          transform: translateY(-5px);
+      }
+  </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="box1">
+        <img
+          src="{{url_for('static',filename='img/bloodcancer.png')}}"
+          height="180px"
+          width="100%"
+        />
+        <center>
+          <h2>Blood Cancer Symptoms</h2>
+          <p>Symptoms of blood cancer, such as leukemia, lymphoma, or myeloma, can vary depending on the type and stage of the cancer, but common symptoms may include fatigue, weakness, unexplained weight loss, fever, night sweats, frequent infections, easy bruising or bleeding, swollen lymph nodes, bone pain, and enlarged spleen or liver. Other symptoms may include shortness of breath, pale skin, and recurrent nosebleeds or gum bleeding. It's important to note that symptoms can also be non-specific and may resemble other conditions, so a medical evaluation is necessary for accurate diagnosis and appropriate management. </p>
+        </center>
+      </div>
+      <div class="box2">
+        <img
+          src="{{url_for('static',filename='img/bloodcancertreament.jpg')}}"
+          height="180px"
+          width="100%"
+        />
+        <center>
+          <h2>Blood Cancer Treament</h2>
+           <p>Treatment for blood cancer typically depends on the specific type of blood cancer, such as leukemia, lymphoma, or myeloma, as well as the stage and individual patient factors. Common treatment options may include chemotherapy, targeted therapy, immunotherapy, radiation therapy, stem cell transplantation, or a combination of these approaches. The goal of treatment is to destroy cancerous cells, restore normal blood cell production, and improve symptoms and overall quality of life. Close monitoring and follow-up care are important components of managing blood cancer and optimizing outcomes. Early diagnosis and prompt initiation of treatment are crucial for better prognosis.</p>
+        </center>
+      </div>
+      <div class="box3">
+        <img
+          src="{{url_for('static',filename='img/cancerhosiptal.jpg')}}"
+          height="180px"
+          width="100%"
+        />
+        <center>
+          <h2>Cancer Hostipal</h2>
+          <p>IndusCancer.com provides comprehensive resources and support for individuals and families affected by cancer, offering valuable information, community forums, and access to medical professionals, fostering a supportive environment for those navigating their cancer journey.</p>
+          <button><a href="http://induscancer.com">CLICK HERE</a></button>
+        </center>
+      </div>
+      
+  </body>
+</html>

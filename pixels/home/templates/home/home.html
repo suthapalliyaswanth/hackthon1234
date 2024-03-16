@@ -1,0 +1,92 @@
+<!-- home/templates/home/home.html -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to Pixels</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/styles.css' %}"
+    />
+  </head>
+  <body>
+    <div class="main">
+      {% include "nav.html" %}
+      <div class="container">
+        <div class="row type-1">
+          <div class="col-lg-11">
+            <img class="img-responsive" src="{% static 'images/r1.png' %}" />
+          </div>
+          <div class="col-lg-12">
+            <h2 class="page-header">Welcome to <strong>pixel+</strong></h2>
+            <p class="lead">
+                <span>    Welcome to our forward-thinking medical website, where we're revolutionizing healthcare with the power of machine learning algorithms. Through cutting-edge predictive analytics, we're transforming the way diseases are understood and managed. Our platform analyzes vast datasets to detect patterns and trends, allowing for early disease detection and personalized health insights.</span>
+
+                <span>Imagine a world where diseases are predicted before symptoms appear, enabling proactive interventions and better health outcomes. That's the future we're creating. Our user-friendly interface empowers individuals to take control of their health journey, whether it's managing chronic conditions or striving for optimal wellness. Join us in shaping the future of healthcare—one prediction at a time.</span>
+                
+                <span>Welcome to a new era of healthcare, where technology and compassion converge to improve lives. With our ML-powered platform, you have the tools to make informed decisions and take proactive steps towards better health. Together, let's unlock the potential of predictive analytics to create a healthier world—for ourselves and generations to come.</span>
+            </p>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-lg-11">
+            <img class="img-responsive" src="{% static 'images/r2.png' %}" />
+          </div>
+          <div class="col-lg-12">
+            <h2 class="page-header">Heart</h2>
+            <p class="lead">
+              Heart diseases encompass a range of conditions that affect the heart and blood vessels, often leading to serious health complications. As one of the leading causes of mortality worldwide, understanding the risk factors, symptoms, and preventive measures for heart diseases is crucial for maintaining heart health.
+
+Through a user-friendly interface, individuals can input relevant health data such as age, gender, blood pressure, cholesterol levels, and lifestyle factors. Our sophisticated predictive models analyze this data to assess the risk of various heart conditions, including coronary artery disease, heart failure, arrhythmias, and valvular heart disease. By harnessing the power of data-driven insights, our platform enables early detection and intervention, ultimately leading to better outcomes and improved quality of life for our users. Join us in revolutionizing preventive healthcare and taking proactive steps towards a healthier heart.
+            </p>
+            <a class="a-row" href="{% url 'service' service="heart" %}">Check Here</a>
+          </div>
+        </div>
+        <div class="row  type-1">
+          <div class="col-lg-11">
+            <img class="img-responsive" src="{% static 'images/r3.png' %}" />
+          </div>
+          <div class="col-lg-12">
+            <h2 class="page-header">Diabeties</h2>
+            <p class="lead">
+              Diabetes is a chronic condition characterized by high levels of blood glucose (sugar) due to either insufficient insulin production or ineffective insulin utilization by the body. It affects millions of people worldwide and can lead to serious health complications if not properly managed. 
+Our platform offers a revolutionary approach to diabetes prevention through predictive modeling. Using a user-friendly interface, individuals can input relevant health data such as age, weight, height, family history of diabetes, physical activity level, and dietary habits. Our sophisticated predictive models analyze this data to assess the risk of developing diabetes, providing personalized insights and actionable recommendations for prevention.
+            </p>
+            <a class="a-row" href="{% url 'service' service="diabeties" %}">Check Here</a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-11">
+            <img class="img-responsive" src="{% static 'images/r4.png' %}" />
+          </div>
+          <div class="col-lg-12">
+            <h2 class="page-header">Sleep Quality</h2>
+            <p class="lead">
+              Sleep quality plays a vital role in overall health and well-being, impacting cognitive function, mood, immune function, and physical health. However, factors such as stress, lifestyle habits, and medical conditions can affect sleep quality, leading to sleep disturbances and related health issues.
+Our innovative project focuses on predicting sleep quality based on user inputs and lifestyle factors. Through a user-friendly interface, individuals can input relevant data such as bedtime habits, sleep duration, sleep environment, stress levels, and daytime activities.
+            </p>
+            <a class="a-row" href="{% url 'service' service="sleep-cycle" %}">Check Here</a>
+          </div>
+        </div>
+        <div class="row  type-1">
+          <div class="col-lg-11">
+            <img class="img-responsive" src="{% static 'images/r5.png' %}" />
+          </div>
+          <div class="col-lg-12">
+            <h2 class="page-header">Dietary Plan</strong></h2>
+            <p class="lead">
+              Maintaining a healthy diet is essential for overall well-being and disease prevention. However, with the abundance of dietary information available, finding the right approach for your individual needs can be overwhelming. Our personalized diet suggestion model aims to simplify this process by analyzing your unique health profile and lifestyle factors to provide tailored dietary recommendations.
+sing our user-friendly interface, you can input relevant health information such as age, gender, weight, height, activity level, dietary preferences, and any existing health conditions.
+            </p>
+            <a class="a-row" href="{% url 'service' service="dietary-plan" %}">Check Here</a>
+          </div>
+        </div>
+      </div>
+      {% include "footer.html" %}
+    </div>
+  </body>
+</html>

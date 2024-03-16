@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parkinson's Disease Prediction Result</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f8f9fa; /* Light gray background */
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333; /* Dark text color */
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff; /* White background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+}
+
+.card-deck {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card {
+    width: calc(33.33% - 20px);
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Lift the card slightly on hover */
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.card-title {
+    margin-top: 0;
+    color: #333; /* Dark text color */
+}
+
+.card-text {
+    color: #555; /* Medium dark text color */
+}
+
+.card-text:last-child {
+    margin-bottom: 0;
+}
+
+.btn-back {
+    display: block;
+    margin-top: 20px;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    background-color: #007bff; /* Primary blue color */
+    color: #fff; /* White text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-back:hover {
+    background-color: #0056b3; /* Darker shade of blue on hover */
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Parkinsons Disease Prediction Result</h1>
+        <div class="parkinsons_result">
+            <center><b><p>{{ diagnosis }}</p></b></center>
+            {% if diagnosis == "This Person May Have A Risk Of Developing Parkinson's disease" %}
+            <!-- Display the HTML structure only when the diagnosis is positive (result is 1) -->
+            <div class="card-deck">
+                <div class="card">
+                    <img src="{{ url_for('static', filename='img/yoga.gif') }}" class="card-img-top" alt="Eye Exercise 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Yoga</h5>
+                        <p class="card-text">Yoga is essentially a spiritual discipline based on an extremely subtle science, which focuses on bringing harmony between mind and body.</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="{{ url_for('static', filename='img/jumping.gif') }}" class="card-img-top" alt="Eye Exercise 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Jumping</h5>
+                        <p class="card-text">Jumping exercises are anaerobic exercises that involve quick bursts of energy. The benefits of jumping include improved cardiovascular health, metabolism, bone density, strength, muscle tone, balance and coordination.</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="{{ url_for('static', filename='img/30ex.gif') }}" class="card-img-top" alt="Eye Exercise 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Exercises</h5>
+                        <p class="card-text">Regular physical activity can improve your muscle strength and boost your endurance. Exercise sends oxygen and nutrients to your tissues and helps your cardiovascular system work more efficiently.</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                </div>
+            </div>
+            <div class="videos-container">
+                <div class="video-wrapper">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/GCoZ5oup9ws?si=208JMYc71W1RjTpO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+                <div class="video-wrapper">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/3d7DfnI-x4Y?si=cPbtKSjrMKZCXBrv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+                <div class="video-wrapper">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/rZTnEu_Rmss?si=lK2HL0nWjYrjODXH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+            </div>
+            
+            {% endif %}
+        </div><br>
+        <a href="/prediction" class="btn-back">Back to Prediction Page</a>
+    </div>
+
+</body>
+</html>

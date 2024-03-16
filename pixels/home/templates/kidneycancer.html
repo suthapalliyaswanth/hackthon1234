@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+      
+      body {
+          font-family: "Roboto", sans-serif;
+          background-image: linear-gradient(120deg, #f7d9b9 0%, #c4b9cb 100%);
+          margin: 0;
+          padding: 20px;
+      }
+
+      .box {
+          display: flex;
+          justify-content: center;
+          align-items: flex-start;
+          gap: 20px;
+      }
+
+      .box1, .box2, .box3 {
+          width: 300px;
+          height: 500px; /* Set fixed height for all boxes */
+          box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+          border-radius: 30px;
+          padding: 20px;
+          transition: 0.3s;
+          background-color: #f0e1d7;
+          display: flex;
+          flex-direction: column;
+      }
+
+      .box1:hover, .box2:hover, .box3:hover {
+          transform: translateY(-10px);
+      }
+
+      img {
+          border-top-right-radius: 30px;
+          border-top-left-radius: 30px;
+          width: 100%;
+          height: auto;
+      }
+
+      h2, p {
+          text-align: center;
+          color: #333333;
+      }
+
+      button {
+          display: block;
+          width: 100%;
+          padding: 15px 20px;
+          text-align: center;
+          border: none;
+          background-color: #603f83ff;
+          outline: none;
+          border-radius: 30px;
+          font-size: 1.2rem;
+          color: #ffffff;
+          cursor: pointer;
+          transition: 0.3s;
+          margin-top: auto;
+      }
+
+      button:hover {
+          background-color: #c7d3d4ff;
+          color: #603f83ff;
+          transform: translateY(-5px);
+      }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <div class="box1">
+      <img src="{{url_for('static',filename='img/Kidneycancertreatment.png')}}" height="180px" width="100%">
+      <center>
+        <h2>Kidney Cancer Symptoms</h2>
+        <p>Symptoms of kidney cancer may include blood in the urine, persistent pain in the side or back, unexplained weight loss, fatigue, and intermittent fevers, often manifesting in advanced stages when the cancer has spread. Early detection through routine check-ups is crucial for better prognosis and treatment outcomes. </p>
+      </center>
+    </div>
+    <div class="box2">
+      <img src="{{url_for('static',filename='img/kidneycancertreament1.png')}}" height="180px" width="100%">
+      <center>
+        <h2>Kidney Cancer Treatment</h2>
+        <p>Treatment for kidney cancer often involves a combination of surgery, targeted therapy, immunotherapy, or radiation therapy, tailored to the stage and type of cancer, with regular monitoring to manage and prevent recurrence. Beyond surgery, treatments like radiation therapy and chemotherapy may be employed to target any remaining cancer cells, while newer approaches like immunotherapy harness the body's immune system to fight the cancer.</p>
+      </center>
+    </div>
+
+    <div class="box3">
+      <img src="{{url_for('static',filename='img/cancerhosiptal.jpg')}}" height="180px" width="100%">
+      <center>
+        <h2>Cancer Hospital</h2>
+        <p>IndusCancer.com provides comprehensive resources and support for individuals and families affected by cancer, offering valuable information, community forums, and access to medical professionals, fostering a supportive environment for those navigating their cancer journey.</p>
+        <button><a href="http://induscancer.com">CLICK HERE</a></button>
+      </center>
+    </div>
+  </div>
+</body>
+</html>

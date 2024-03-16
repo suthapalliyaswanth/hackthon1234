@@ -1,0 +1,42 @@
+{% load static %}
+
+<nav>
+  <div class="nav-wrapper">
+    <div class="nav-left">
+      <img src="{% static 'images/logo-small.png' %}" />
+    </div>
+    <div class="nav-right">
+      <a href="{% url 'home' %}"
+        >Home
+        <div class="under"></div
+      ></a>
+      <a href="{% url 'dummy' %}"
+        >About
+        <div class="under"></div
+      ></a>
+      <a href="{% url 'dummy' %}"
+        >Contact
+        <div class="under"></div
+      ></a>
+      {% if request.user.is_authenticated %}
+      <a href="{% url 'logout' %}"
+        >Logout
+        <div class="under"></div
+      ></a>
+      <a href="{% url 'dashboard' %}"
+        >Dashboard
+        <div class="under"></div
+      ></a>
+      {% else %}
+      <a href="{% url 'login' %}"
+        >Login
+        <div class="under"></div
+      ></a>
+      <a href="{% url 'signup' %}"
+        >Sign Up
+        <div class="under"></div
+      ></a>
+      {% endif %}
+    </div>
+  </div>
+</nav>

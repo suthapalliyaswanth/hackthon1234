@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calorie Calculator</title>
+    <style>
+       body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 500px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+form {
+    margin-top: 20px;
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23333" width="18px" height="18px"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 20px 20px;
+    cursor: pointer;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.result {
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Calorie Calculator</h1>
+        <form action="/get_calories" method="post">
+            
+                <label for="foodItem">Select a Food Item:</label>
+                <select id="foodItem" name="foodItem">
+                    <option value="Apple">Apple</option>
+                    <option value="Banana">Banana</option>
+                    <option value="Orange">Orange</option>
+                    <option value="Grapes">Grapes</option>
+                    <option value="Strawberries">Strawberries</option>
+                    <option value="Blueberries">Blueberries</option>
+                    <option value="Pineapple">Pineapple</option>
+                    <option value="Watermelon">Watermelon</option>
+                    <option value="Kiwi">Kiwi</option>
+                    <option value="Mango">Mango</option>
+                    <option value="Peach">Peach</option>
+                    <option value="Pear">Pear</option>
+                    <option value="Plum">Plum</option>
+                    <option value="Cherries">Cherries</option>
+                    <option value="Avocado">Avocado</option>
+                    <option value="Tomato">Tomato</option>
+                    <option value="Cucumber">Cucumber</option>
+                    <option value="Carrot">Carrot</option>
+                    <option value="Broccoli">Broccoli</option>
+                    <option value="Spinach">Spinach</option>
+                    <option value="Lettuce">Lettuce</option>
+                    <option value="Potato">Potato</option>
+                    <option value="Sweet Potato">Sweet Potato</option>
+                    <option value="Quinoa">Quinoa</option>
+                    <option value="Brown Rice">Brown Rice</option>
+                    <option value="White Rice">White Rice</option>
+                    <option value="Whole Wheat Bread">Whole Wheat Bread</option>
+                    <option value="White Bread">White Bread</option>
+                    <option value="Egg">Egg</option>
+                    <option value="Chicken Breast">Chicken Breast</option>
+                    <option value="Salmon">Salmon</option>
+                    <option value="Tofu">Tofu</option>
+                    <option value="Almonds">Almonds</option>
+                    <option value="Walnuts">Walnuts</option>
+                    <option value="Peanuts">Peanuts</option>
+                    <option value="Milk (1 cup)">Milk (1 cup)</option>
+                    <option value="Yogurt (1 cup)">Yogurt (1 cup)</option>
+                    <option value="Cheese (1 slice)">Cheese (1 slice)</option>
+                    <option value="Beef (lean cut)">Beef (lean cut)</option>
+                    <option value="Pork (lean cut)">Pork (lean cut)</option>
+                    <option value="Lamb (lean cut)">Lamb (lean cut)</option>
+                    <option value="Turkey Breast (skinless)">Turkey Breast (skinless)</option>
+                    <option value="Shrimp (cooked)">Shrimp (cooked)</option>
+                    <option value="Tuna (canned in water)">Tuna (canned in water)</option>
+                    <option value="Sardines (canned in oil)">Sardines (canned in oil)</option>
+                    <option value="Cod (cooked)">Cod (cooked)</option>
+                    <option value="Crab (cooked)">Crab (cooked)</option>
+                    <option value="Lobster (cooked)">Lobster (cooked)</option>
+                    <option value="Oysters (cooked)">Oysters (cooked)</option>
+                    <option value="Scallops (cooked)">Scallops (cooked)</option>
+                    <option value="Cottage Cheese (1/2 cup)">Cottage Cheese (1/2 cup)</option>
+                    <option value="Cream Cheese (1 oz)">Cream Cheese (1 oz)</option>
+                    <option value="Butter (1 tbsp)">Butter (1 tbsp)</option>
+                    <option value="Olive Oil (1 tbsp)">Olive Oil (1 tbsp)</option>
+                    <option value="Canola Oil (1 tbsp)">Canola Oil (1 tbsp)</option>
+                    <option value="Coconut Oil (1 tbsp)">Coconut Oil (1 tbsp)</option>
+                    <option value="Lemon">Lemon</option>
+                    <option value="Lime">Lime</option>
+                    <option value="Cabbage">Cabbage</option>
+                    <option value="Kale">Kale</option>
+                    <option value="Arugula">Arugula</option>
+                    <option value="Bok Choy">Bok Choy</option>
+                    <option value="Swiss Chard">Swiss Chard</option>
+                    <option value="Parsley">Parsley</option>
+                    <option value="Cilantro">Cilantro</option>
+                    <option value="Dill">Dill</option>
+                    <option value="Thyme">Thyme</option>
+                    <option value="Basil">Basil</option>
+                    <option value="Rosemary">Rosemary</option>
+                    <option value="Oregano">Oregano</option>
+                    <option value="Sage">Sage</option>
+                    <option value="Mint">Mint</option>
+                    <option value="Parsnip">Parsnip</option>
+                    <option value="Turnip">Turnip</option>
+                    <option value="Rutabaga">Rutabaga</option>
+                    <option value="Artichoke">Artichoke</option>
+                    <option value="Asparagus">Asparagus</option>
+                    <option value="Beetroot">Beetroot</option>
+                    <option value="Bell Pepper">Bell Pepper</option>
+                </select>
+                <input type="submit" value="Submit">
+        </form>
+        
+    </div>
+</body>
+</html>

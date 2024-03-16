@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Disease Prediction Result</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f8f9fa; /* Light gray background */
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333; /* Dark text color */
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff; /* White background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+}
+
+.card-deck {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card {
+    width: calc(33.33% - 20px);
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Lift the card slightly on hover */
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.card-title {
+    margin-top: 0;
+    color: #333; /* Dark text color */
+}
+
+.card-text {
+    color: #555; /* Medium dark text color */
+}
+
+.card-text:last-child {
+    margin-bottom: 0;
+}
+
+.btn-back {
+    display: block;
+    margin-top: 20px;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    background-color: #007bff; /* Primary blue color */
+    color: #fff; /* White text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-back:hover {
+    background-color: #0056b3; /* Darker shade of blue on hover */
+}
+
+    </style>
+</head>
+<body>
+    <h1>Heart Disease Prediction Result</h1>
+    <div class="heart_result">
+       <b><center> <p>{{ diagnosis }}</p> </center></b>
+        {% if diagnosis == 'This Person May Have A Risk Of Developing Heart disease' %}
+        <!-- Display the HTML structure only when the diagnosis is positive (result is 1) -->
+        <div class="container">
+            <div class="card-deck">
+                <div class="card">
+                    <img src="{{ url_for('static', filename='img/running.gif') }}" class="card-img-top" alt="Home Exercise">
+                    <div class="card-body">
+                        <h5 class="card-title">Home Exercise</h5>
+                        <p class="card-text">Being physically active can improve your brain health, help manage weight, reduce the risk of disease, strengthen bones and muscles, and improve your ability to do everyday activities.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="{{ url_for('static', filename='img/risehands.gif') }}" class="card-img-top" alt="Body Fitness">
+                    <div class="card-body">
+                        <h5 class="card-title">Body Fitness</h5>
+                        <p class="card-text">Being physically active can improve your brain health, help manage weight, reduce the risk of disease, strengthen bones and muscles, and improve your ability to do everyday activities.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="{{ url_for('static', filename='img/bending.gif') }}" class="card-img-top" alt="Bending Exercise">
+                    <div class="card-body">
+                        <h5 class="card-title">Bending Exercise</h5>
+                        <p class="card-text">Being physically active can improve your brain health, help manage weight, reduce the risk of disease, strengthen bones and muscles, and improve your ability to do everyday activities.</p>
+                    </div>
+                </div>
+            </div>
+
+            <br> <!-- Add line break -->
+
+            <div class="videos-container">
+                <div class="video-wrapper">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/IYGCLQ6USCk?si=sbvdzE1Lo5HqXJhA" title="Home Exercise Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+                <div class="video-wrapper">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Gxs8CgjptT0?si=BZqTQ_FbQdeDIZG4" title="Body Fitness Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+                <div class="video-wrapper">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/JBreMO9CUvM?si=dYVb07r0A0yxSKzJ" title="Bending Exercise Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <!-- Back to prediction page link -->
+            
+        </div>
+        {% endif %} <br>
+        <button><a href="/prediction" >Back to Prediction Page</a></button>
+    </div>
+</body>
+</html>

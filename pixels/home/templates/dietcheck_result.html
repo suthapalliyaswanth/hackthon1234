@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Diet Result</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      h1 {
+        color: #333;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      p {
+        font-size: 18px;
+        color: #555;
+        text-align: center;
+      }
+
+      p.diet-status {
+        font-weight: bold;
+        color: #27ae60; /* Green color for positive status */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Diet Result</h1>
+      <p class="diet-status">{{ diet_status }}</p>
+      <a href="/" class="btn">Go Back</a>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liver Disease graph</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-top: 50px;
+        }
+
+        #graph, #bar {
+            width: 80%;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+            padding: 20px;
+        }
+
+        @media (max-width: 768px) {
+            #graph, #bar {
+                width: 90%;
+            }
+        }
+
+        #graph {
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Liver Disease Graph</h1>
+    <div id="graph"></div>
+    <div id="bar"></div>
+
+    <script>
+        // JavaScript code to generate graphs using Plotly
+        // You can replace this with your actual data
+        var data = [{
+            x: ['2017', '2018', '2019', '2020', '2021'],
+            y: [19580, 20059, 21005, 22080, 23054],
+            type: 'line',
+            name: 'Liver Disease Attacks'
+        }];
+
+        Plotly.newPlot('graph', data);
+
+        var layout = {
+            title: 'Liver Disease Attacks',
+            xaxis: {
+                title: 'Years'
+            },
+            yaxis: {
+                title: 'Number of Cases'
+            }
+        };
+
+        Plotly.newPlot('bar', [{
+            x: ['2017', '2018', '2019', '2020', '2021'],
+            y: [19580, 20059, 21005, 22080, 23054],
+            type: 'bar'
+        }], layout);
+    </script>
+</body>
+</html>

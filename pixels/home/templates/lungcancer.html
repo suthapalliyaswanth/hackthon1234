@@ -1,0 +1,109 @@
+<html>
+  <head>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+      
+      body {
+          font-family: "Roboto", sans-serif;
+          background-image: linear-gradient(120deg, #f7d9b9 0%, #c4b9cb 100%);
+          margin: 0;
+          padding: 20px;
+      }
+
+      .box {
+          display: flex;
+          justify-content: space-between; /* Distribute space between cards */
+          gap: 20px;
+      }
+
+      .box1, .box2, .box3 {
+          width: calc(33.33% - 20px); /* Adjust card width to fit three cards in a row with gap */
+          height: 600px; /* Set fixed height for all boxes */
+          box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+          border-radius: 30px;
+          padding: 20px;
+          transition: 0.3s;
+          background-color: #f0e1d7;
+          display: flex;
+          flex-direction: column;
+      }
+
+      .box1:hover, .box2:hover, .box3:hover {
+          transform: translateY(-10px);
+      }
+
+      img {
+          border-top-right-radius: 30px;
+          border-top-left-radius: 30px;
+          width: 100%;
+          height: auto;
+      }
+
+      h2, p {
+          text-align: center;
+          color: #333333;
+      }
+
+      button {
+          display: block;
+          width: 100%;
+          padding: 15px 20px;
+          text-align: center;
+          border: none;
+          background-color: #5a189aff; /* Updated button color */
+          outline: none;
+          border-radius: 30px;
+          font-size: 1.2rem;
+          color: #ffffff; /* Updated button front color */
+          cursor: pointer;
+          transition: 0.3s;
+          margin-top: auto;
+      }
+
+      button:hover {
+          background-color: #e63946ff; /* Updated button hover color */
+          color: #ffffff;
+          transform: translateY(-5px);
+      }
+  </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="box1">
+        <img
+          src="{{url_for('static',filename='img/lungcancer.png')}}"
+          height="180px"
+          width="100%"
+        />
+        <center>
+          <h2>LungCancer Symptoms</h2>
+          <p>Lung cancer symptoms can include persistent cough, coughing up blood, chest pain, shortness of breath, hoarseness, unexplained weight loss, fatigue, and recurrent respiratory infections. Early detection through screening and prompt medical attention can improve treatment options and outcomes. </p>
+        </center>
+      </div>
+      <div class="box2">
+        <img
+          src="{{url_for('static',filename='img/lungscancertreament.jpg')}}"
+          height="180px"
+          width="100%"
+        />
+        <center>
+          <h2>Lungs Cancer Treament</h2>
+          <p>Lung cancer treatment options may include surgery, chemotherapy, radiation therapy, targeted therapy, immunotherapy, or a combination of these modalities, depending on the cancer type, stage, and individual patient factors. Treatment aims to remove or destroy cancer cells, alleviate symptoms, and improve quality of life.</p>
+        </center>
+      </div>
+      
+      <div class="box3">
+        <img
+          src="{{url_for('static',filename='img/cancerhosiptal.jpg')}}"
+          height="180px"
+          width="100%"
+        />
+        <center>
+          <h2>Cancer Hostipal</h2>
+          <p>IndusCancer.com provides comprehensive resources and support for individuals and families affected by cancer, offering valuable information, community forums, and access to medical professionals, fostering a supportive environment for those navigating their cancer journey.</p>
+          <button><a href="http://induscancer.com">CLICK HERE</a></button>
+        </center>
+      </div>
+      
+  </body>
+</html>

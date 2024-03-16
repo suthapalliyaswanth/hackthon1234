@@ -1,0 +1,222 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    width: 90vw;
+    margin-inline: 5vw;
+    justify-content: start;
+    align-items: start;
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    padding: 30px;
+    align-items: start;
+    font-size: 25px;
+    justify-content: start;
+}
+/* styles.css */
+/* styles.css */
+
+/* Form container */
+.form-container {
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+/* Form fields */
+.form-field {
+    margin-bottom: 20px;
+}
+
+.form-field label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-field input[type="text"],
+.form-field select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-field textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Submit button */
+.submit-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.submit-button:hover {
+    background-color: #45a049;
+}
+
+/* Error messages */
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* Success message */
+.success-message {
+    color: green;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+
+.content form {
+    /* width: 50%; Adjust the width as needed */
+    margin: auto; /* Center the form horizontally */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: black;
+    background-color: #f9f9f9;
+}
+
+/* Apply styles to form inputs and labels */
+.content form input[type="text"],
+.content form select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.content form label {
+    font-weight: bold;
+}
+
+/* Apply styles to submit button */
+.content form button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Apply styles to form title */
+.content h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+/* styles.css */
+/* Apply styles to form container */
+.content form {
+    width: 50%; /* Adjust the width as needed */
+    margin: auto; /* Center the form horizontally */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+/* Apply styles to form inputs and labels */
+.content form input[type="text"],
+.content form select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.content form label {
+    font-weight: bold;
+}
+
+/* Apply styles to submit button */
+.content form button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Apply styles to form title */
+.content h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Apply grid layout to p tags */
+.content form p {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px; /* Adjust the gap between columns */
+    margin-bottom: 10px; /* Adjust margin between rows */
+}
+
+/* Optional: Adjust individual input sizes */
+.content form p input[type="text"],
+.content form p select {
+    width: calc(100% - 5px); /* Adjust input width */
+    padding: 10px;
+    margin: 0;
+}
+/* Apply styles to input fields of type number */
+.content form input[type="number"] {
+    width: 100%; /* Adjust width as needed */
+    padding: 10px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+/* Optional: Additional styles for input[type="number"] */
+.content form input[type="number"]::-webkit-inner-spin-button,
+.content form input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+.content{
+    width: 100%;
+    /* margin-inline: 15%; */
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  th {
+    background-color: #f2f2f2;
+  }
+  tr:hover {
+    background-color: #f5f5f5;
+  }

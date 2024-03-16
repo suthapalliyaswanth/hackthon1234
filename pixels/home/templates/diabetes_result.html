@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Disease Prediction Result</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .container {
+            max-width: 800px; /* Adjust as needed */
+            margin: 0 auto;
+        }
+        .card-deck {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .card {
+            width: calc(33.33% - 20px); /* Adjust as needed */
+            margin-bottom: 20px;
+        }
+        .card img {
+            width: 100%;
+            height: auto;
+        }
+        .card-body {
+            padding: 15px;
+        }
+        .card-title {
+            margin-top: 0;
+        }
+        .videos-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* Adjust the number of columns as needed */
+      gap: 20px; /* Adjust the gap between videos */
+    }
+    .video-wrapper {
+      position: relative;
+      padding-bottom: 56.25%; /* Aspect ratio 16:9 for responsive video */
+      overflow: hidden;
+    }
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .videos-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* Adjust the number of columns as needed */
+      gap: 20px; /* Adjust the gap between videos */
+    }
+    .video-wrapper {
+      position: relative;
+      padding-bottom: 56.25%; /* Aspect ratio 16:9 for responsive video */
+      overflow: hidden;
+    }
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.card-deck {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card {
+    width: calc(33.33% - 20px);
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.card-title {
+    margin-top: 0;
+    font-size: 18px;
+}
+
+.card-text {
+    font-size: 14px;
+    color: #333;
+}
+
+.text-muted {
+    color: #999;
+}
+
+.videos-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    overflow: hidden;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 8px;
+}
+
+.back-link {
+    text-decoration: none;
+    color: #fff;
+    background-color: #007bff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.back-link:hover {
+    background-color: #0056b3;
+}
+
+  
+    </style>
+</head>
+<body>
+    <h1>Diabetes Disease Prediction Result</h1>
+    <div class="diabetes_result">
+       <b><center> <p>{{ diagnosis }}</p> </center> </b>
+        {% if diagnosis == 'This Person May Have A Risk Of Developing Diabetes' %}
+        <!-- Display the HTML structure only when the diagnosis is positive (result is 1) -->
+        <div class="container">
+            <div class="card-deck">
+                <div class="card">
+                    <img src="{{ url_for('static', filename='img/jumping.gif') }}" class="card-img-top" alt="Eye Exercise 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Jumping Exercise </h5>
+                        <p class="card-text">Being physically active can improve your brain health, help manage weight, reduce the risk of disease, strengthen bones and muscles, and improve your ability to do everyday activities.</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="{{ url_for('static', filename='img/30ex.gif') }}" class="card-img-top" alt="Eye Exercise 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Fittness</h5>
+                        <p class="card-text"> Being physically active can improve your brain health, help manage weight, reduce the risk of disease, strengthen bones and muscles, and improve your ability to do everyday activities.</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="{{ url_for('static', filename='img/runs.gif') }}" class="card-img-top" alt="Eye Exercise 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Fittness</h5>
+                        <p class="card-text">Being physically active can improve your brain health, help manage weight, reduce the risk of disease, strengthen bones and muscles, and improve your ability to do everyday activities.</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                </div>
+            </div> <br>
+
+
+            <div class="videos-container">
+                <div class="video-wrapper">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/K9u6kP7_qn0?si=9DP4sc4u181pH235" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+                </div>
+                <div class="video-wrapper">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/jHBOYkBULoo?si=d5o7a7Hlud085eaO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+                </div>
+                <div class="video-wrapper">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/__wzJ_IUUTU?si=hsFNjrgGE172uSxk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+              </div>
+           
+        </div>
+        
+        {% endif %}<br>
+       <center><button><a href="/prediction">Back to Prediction Page</a></button></center> 
+    </div>
+</body>
+</html>

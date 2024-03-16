@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Disease Prediction Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f7f7f7; /* Light gray background */
+        }
+        h1 {
+            text-align: center;
+            color: #333; /* Dark gray heading */
+            margin-bottom: 20px;
+        }
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: #fff; /* White background */
+            padding: 20px;
+            border-radius: 8px; /* Rounded corners */
+            box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Drop shadow */
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555; /* Dark gray label text */
+        }
+        input[type="text"] {
+            width: calc(100% - 12px);
+            padding: 8px; /* Increased padding */
+            margin-bottom: 10px;
+            border: 1px solid #ccc; /* Light gray border */
+            border-radius: 4px; /* Rounded corners */
+            box-sizing: border-box; /* Include padding and border in element's total width and height */
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 12px; /* Increased padding */
+            background-color: #007bff; /* Blue submit button */
+            color: #fff; /* White text */
+            border: none;
+            border-radius: 4px; /* Rounded corners */
+            cursor: pointer;
+            transition: background-color 0.3s; /* Smooth hover effect */
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+    </style>
+</head>
+<body>
+    <h1>Heart Disease Prediction Form</h1>
+    <form action="/heart_prediction" method="post">
+        <label for="age">Age:</label>
+        <input type="text" id="age" name="age" required>
+        
+        <label for="sex">Sex (0 = female, 1 = male):</label>
+        <input type="text" id="sex" name="sex" required>
+        
+        <label for="cp">Chest Pain times:</label>
+        <input type="text" id="cp" name="cp" required>
+        
+        <label for="trestbps">Resting Blood Pressure:</label>
+        <input type="text" id="trestbps" name="trestbps" required>
+        
+        <label for="chol">Serum Cholestoral in mg/dl:</label>
+        <input type="text" id="chol" name="chol" required>
+        
+        <label for="fbs">Fasting Blood Sugar &gt; 120 mg/dl (0 = false, 1 = true):</label>
+        <input type="text" id="fbs" name="fbs" required>
+        
+        <label for="restecg">Resting Electrocardiographic results:</label>
+        <input type="text" id="restecg" name="restecg" required>
+        
+        <label for="thalach">Maximum Heart Rate achieved:</label>
+        <input type="text" id="thalach" name="thalach" required>
+        
+        <label for="exang">Exercise Induced Angina (0 = no, 1 = yes):</label>
+        <input type="text" id="exang" name="exang" required>
+        
+        <label for="oldpeak">ST depression induced by exercise relative to rest:</label>
+        <input type="text" id="oldpeak" name="oldpeak" required>
+        
+        <label for="slope">The slope of the peak exercise ST segment:</label>
+        <input type="text" id="slope" name="slope" required>
+        
+        <label for="ca">Number of major vessels (0-3) colored by fluoroscopy:</label>
+        <input type="text" id="ca" name="ca" required>
+        
+        <label for="thal">Thalassemia (1 = normal; 2 = fixed defect; 3 = reversible defect):</label>
+        <input type="text" id="thal" name="thal" required>
+
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>

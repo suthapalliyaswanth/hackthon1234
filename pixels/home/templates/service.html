@@ -1,0 +1,57 @@
+<!-- home/templates/home/home.html -->
+{% load static %} {% load myapp_tags %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to Pixels</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/styles.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/service.css' %}"
+    />
+  </head>
+  <body>
+    <div class="main">
+      {% include "nav.html" %}
+      <div class="container">
+        <div class="info">
+          <h1>{{ service }}</h1>
+          <p>{{ text }}</p>
+        </div>
+        <div class="content">
+          <form method="post" action="{% url sub %}">
+            {% csrf_token %} {{ form.as_p }}
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+      {% if hist %}
+      <table>
+        <thead>
+          <tr>
+            {% for field_name in field_names %}
+            <th>{{ field_name }}</th>
+            {% endfor %}
+          </tr>
+        </thead>
+        <tbody>
+          {% for record in hist %}
+          <tr>
+            {% for field_name in field_names %}
+            <td>{{ record|get_obj_attr:field_name }}</td>
+            {% endfor %}
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      {% endif %} {% include "footer.html" %}
+    </div>
+  </body>
+</html>
